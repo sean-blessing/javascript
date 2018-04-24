@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>PRS Users List</title>
+    <link href="main.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+	<script>
+	$(document).ready(function(){
+			var url = "http://localhost:8080/Users/List";
+	
+			$.getJSON(url, function(data){
+				var html = "<table>";
+				$.each(data, function(i, item){
+					html += "<tr><td>" + item.Id + "</td>";	
+					html += "<td>" + item.UserName + "</td>";
+					html += "</tr>";
+				});
+				html += "</table>";
+				$("#users").html(html);
+			});          
+        });
+    </script>
+</head>
+
+<body>
+<main>
+	<h1>List Of PRS Users</h1>
+	<div id="users"></div>
+</main>
+</body>
+</html>
