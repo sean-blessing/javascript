@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Var scope demo</title>
+</head>
+<body>
+    
+<script>
+
+var aVar = "hello";  //global
+
+function b() {
+    someText = "some text"; // also global
+    var otherText = "other text"; // not global
+}
+
+function a()
+{
+    alert(aVar);
+    alert(someText);
+    alert(otherText);
+  
+}
+
+b();
+a();
+</script>
+</body>
+</html>

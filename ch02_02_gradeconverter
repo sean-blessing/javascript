@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Registration</title>
+</head>
+<body>
+    <script>
+        alert("hello!");
+        var fName = "Harold";
+        var lName = "Moore";
+        var bYear = 1998;
+        var tPwd = fName+"*"+bYear;
+        
+        var msg = "Welcome "+fName+" "+
+            lName+"!\n"+"Your registration is complete.\nYour temporary password is: "+tPwd;
+        alert(msg);
+        alert("bye!");
+    </script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>String Concatenation</title>
+</head>
+<body>
+   <h1>Test efficiency of concatenation vs array</h1>
+    <script>
+        var t1 = performance.now();
+        var cnt = 1000000;
+        var s = "";
+        for (var i = 0; i<cnt;i++) {
+            s=s+"0123456789";
+        }
+        var t2 = performance.now();
+        console.log("Time for string concat: "+(t2-t1));
+    </script>
+</body>
+</html>
